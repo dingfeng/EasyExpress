@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">EasyExpress</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="reminder">reminder</string>
+    <string name = "done">done</string>
+    <string-array name="cities">
+        <item>北京</item>
+        <item>上海</item>
+        <item>南京</item>
+        <item>杭州</item>
+    </string-array>
+    <string name = "chooseCity">请选择城市</string>
 </resources>
