@@ -11,4 +11,8 @@
         <item>杭州</item>
     </string-array>
     <string name = "chooseCity">请选择城市</string>
+    <string name="choose_button_discription">此按钮用于选择用户的快递公司</string>
+    <string name="express_id">快递单号：</string>
+    <string name="please_input">请输入快递单号</string>
+    <string name="menu_settings">Settings</string>
 </resources>

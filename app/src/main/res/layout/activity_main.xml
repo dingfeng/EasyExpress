@@ -9,20 +9,130 @@
         android:layout_weight="70"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:background="@drawable/dkgray"
-        />
-    <LinearLayout
+        android:background="@drawable/search_topbg"
+        android:orientation="vertical"
+        >
+       <LinearLayout
+           android:layout_width= "fill_parent"
+           android:layout_height = "0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           >
+           <TextView
+               android:id="@+id/expreee_name"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:text="顺丰"
+               android:paddingLeft="@dimen/left_padding"
+               android:paddingTop="5dp"
+               android:textColor="@color/white"
+               android:typeface="normal"
+               android:textStyle="bold"
+               android:textSize="@dimen/express_name"
+               />
+           <TextView
+               android:id="@+id/express_num"
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:textColor="@color/white"
+               android:typeface="normal"
+               android:textStyle="bold"
+               android:textSize="@dimen/express_num"
+               android:text="12345566666663"
+               />
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:background="@drawable/shunfen"
+               />
+           </LinearLayout>
+        <LinearLayout
+            android:layout_width= "fill_parent"
+            android:layout_height = "0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/express_status"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:typeface="normal"
+                android:textStyle="bold"
+                android:textSize="@dimen/express_num"
+                android:text="已签收"
+                android:paddingLeft="@dimen/left_padding"
+                android:paddingTop="5dp"
+                />
+            <ImageButton
+                android:id="@+id/express_choose"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:background="@drawable/choose_button_image"
+                android:contentDescription="@string/choose_button_discription"
+                />
+        </LinearLayout>
+        </LinearLayout>
+       <!-- <LinearLayout
         android:layout_weight="420"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:background="@drawable/red"
-        />
+        android:orientation="vertical"
+        android:background="@drawable/search_centerbg"
+        >-->
+        <ListView
+            android:id="@+id/list"
+            android:layout_weight="420"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/search_centerbg"
+            />
+       <!-- </LinearLayout>-->
+    
     <LinearLayout
         android:layout_weight="58"
         android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:background="@drawable/yello"
-        />
+        android:orientation="horizontal"
+        android:background="@drawable/search_bottombg"
+       >
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="50dp"
+           android:layout_weight="1"
+           android:textSize="@dimen/express_id"
+           android:text="@string/express_id"
+           android:maxLines="1"
+           android:maxLength="5"
+           android:layout_gravity="center"
+           android:layout_marginTop="15dp"
+           android:textStyle="bold"
+           />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:hint="@string/please_input"
+            android:textStyle="italic"
+            android:background="@drawable/input"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            />
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_button"
+            />
+       </LinearLayout>
 
 
 </LinearLayout>

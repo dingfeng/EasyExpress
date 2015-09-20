@@ -2,4 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="express_name">15sp</dimen>
+    <dimen name="express_num">15sp</dimen>
+    <dimen name="express_status">15sp</dimen>
+    <dimen name="express_info">15sp</dimen>
+    <dimen name="express_id">15sp</dimen>
+    <dimen name="info_text">20sp</dimen>
+    <dimen name="left_padding">18dp</dimen>
 </resources>
