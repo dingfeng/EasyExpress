@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -15,8 +16,15 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.justsdudio.easyexpress.CharacterParser;
+import com.justsdudio.easyexpress.ClearEditText;
+import com.justsdudio.easyexpress.PinyinComparator;
+import com.justsdudio.easyexpress.R;
+import com.justsdudio.easyexpress.SideBar;
 import com.justsdudio.easyexpress.SideBar.OnTouchingLetterChangedListener;
+import com.justsdudio.easyexpress.SortAdapter;
+import com.justsdudio.easyexpress.SortModel;
 
 public class ChooseExpressActivity extends Activity {
 	private ListView sortListView;
@@ -24,13 +32,13 @@ public class ChooseExpressActivity extends Activity {
 	private TextView dialog;
 	private SortAdapter adapter;
 	private ClearEditText mClearEditText;
-	
+
 	/**
 	 * ����ת����ƴ������
 	 */
 	private CharacterParser characterParser;
 	private List<SortModel> SourceDateList;
-	
+
 	/**
 	 * ����ƴ��������ListView�����������
 	 */
@@ -39,34 +47,32 @@ public class ChooseExpressActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_choose);
 		initViews();
 	}
 
 	private void initViews() {
 		//ʵ��������תƴ����
 		characterParser = CharacterParser.getInstance();
-		
+
 		pinyinComparator = new PinyinComparator();
-		
+
 		sideBar = (SideBar) findViewById(R.id.sidrbar);
 		dialog = (TextView) findViewById(R.id.dialog);
 		sideBar.setTextView(dialog);
-		
-		//�����Ҳഥ������
+
 		sideBar.setOnTouchingLetterChangedListener(new OnTouchingLetterChangedListener() {
-			
+
 			@Override
 			public void onTouchingLetterChanged(String s) {
-				//����ĸ�״γ��ֵ�λ��
 				int position = adapter.getPositionForSection(s.charAt(0));
 				if(position != -1){
 					sortListView.setSelection(position);
 				}
-				
+
 			}
 		});
-		
+
 		sortListView = (ListView) findViewById(R.id.country_lvcountry);
 		sortListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -74,7 +80,12 @@ public class ChooseExpressActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				//����Ҫ����adapter.getItem(position)����ȡ��ǰposition����Ӧ�Ķ���
-				Toast.makeText(getApplication(), ((SortModel)adapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
+				//Toast.makeText(getApplication(), ((SortModel)adapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
+                //确定选择快递
+                Intent intent = getIntent();
+                intent.putExtra("express",((SortModel)adapter.getItem(position)).getName());
+                setResult(0,intent);
+                finish();
 			}
 		});
 		
