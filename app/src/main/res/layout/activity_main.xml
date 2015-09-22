@@ -119,6 +119,7 @@
            android:textStyle="bold"
            />
         <EditText
+            android:id = "@+id/id_text"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="2"
@@ -130,9 +131,11 @@
             android:maxLines="1"
             />
         <ImageButton
+            android:id = "@+id/search_button"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:onClick="clickHandler"
             android:background="@drawable/search_button"
             />
        </LinearLayout>
