@@ -2,14 +2,22 @@ package com.justsdudio.easyexpress;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +25,9 @@ import java.util.Map;
 
 public class MainActivity extends Activity {
     private static  Map<String,String> expressMap;
-    private void initExpressName()
+    private ImageView logoView;
+    private TextView expressNameView;
+    private void init()
     {
        /* try {
             InputStreamReader inputReader = new InputStreamReader( getResources().getAssets().open(fileName) );
@@ -40,12 +50,16 @@ public class MainActivity extends Activity {
         {
             expressMap.put(express_names[i],express_ids[i]);
         }
+        logoView = (ImageView) findViewById(R.id.choose_express_button);
+        expressNameView = (TextView) findViewById(R.id.express_name);
+        String expressName = expressNameView.getText().toString();
+        setExpressIconByExpressName(expressName);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       initExpressName();
+        init();
 
     }
 
@@ -104,7 +118,15 @@ public class MainActivity extends Activity {
 
     private void setExpressIconByExpressName(String expressName)
     {
-
+        Resources res = this.getResources();
+        AssetManager assetManager = res.getAssets();
+        try {
+            Drawable image = Drawable.createFromStream(assetManager.open("imagepng/"+expressName),expressName);
+            logoView.setBackground(image);
+            //logoView.invalidateDrawable(image);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
