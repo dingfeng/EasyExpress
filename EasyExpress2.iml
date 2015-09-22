@@ -15,5 +15,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
 </module>
 

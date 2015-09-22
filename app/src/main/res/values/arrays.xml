@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string-array name="date">
-        <item>aae全球专递</item>
+        <item>AAE全球专递</item>
         <item>安捷快递</item>
         <item>安信达快递</item>
         <item>彪记快递</item>
-        <item>bht</item>
+        <item>BHT</item>
         <item>百福东方国际物流</item>
         <item>中国东方（COE）</item>
         <item>长宇物流</item>
         <item>大田物流</item>
         <item>德邦物流</item>
-        <item>dhl</item>
-        <item>dpex</item>
-        <item>d速快递</item>
+        <item>DHL</item>
+        <item>DPEX</item>
+        <item>D速快递</item>
         <item>递四方</item>
-        <item>ems快递</item>
-        <item>fedex（国外）</item>
+        <item>EMS快递</item>
+        <item>FEDEX（国外）</item>
         <item>飞康达物流</item>
         <item>凤凰快递</item>
         <item>飞快达</item>
@@ -63,8 +63,8 @@
         <item>赛澳递</item>
         <item>天地华宇</item>
         <item>天天快递</item>
-        <item>tnt</item>
-        <item>ups</item>
+        <item>TNT</item>
+        <item>UPS</item>
         <item>万家物流</item>
         <item>文捷航空速递</item>
         <item>伍圆</item>
