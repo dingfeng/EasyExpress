@@ -3,10 +3,9 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:background="@drawable/info_bg"
-    android:maxLines="2"
-    android:lines="2"
     android:textStyle="bold"
     android:paddingLeft="@dimen/left_padding"
+    android:paddingRight="@dimen/right_padding"
     android:textSize="@dimen/info_text"
     >
  </TextView>

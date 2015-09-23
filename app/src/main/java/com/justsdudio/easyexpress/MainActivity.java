@@ -93,6 +93,7 @@ public class MainActivity extends Activity {
         ListView list = (ListView)findViewById(R.id.list);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.array_item,infos);
         list.setAdapter(adapter);
+        list.setSelection(adapter.getCount() - 1);
     }
 
     @Override
@@ -232,6 +233,9 @@ public class MainActivity extends Activity {
                 //未签收
                 case HASNOTBEENRECEIVED:
                     state = "未签收";
+                    break;
+                case DELIVERYING:
+                    state = "正在派送";
                     break;
             }
             stateView.setText(state);

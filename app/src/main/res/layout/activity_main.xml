@@ -40,7 +40,7 @@
                android:typeface="normal"
                android:textStyle="bold"
                android:textSize="@dimen/express_num"
-               android:text="12345566666663"
+               android:text=""
                />
            <ImageView
                android:id = "@+id/choose_express_button"
@@ -67,7 +67,6 @@
                 android:typeface="normal"
                 android:textStyle="bold"
                 android:textSize="@dimen/express_num"
-                android:text="已签收"
                 android:paddingLeft="@dimen/left_padding"
                 android:paddingTop="5dp"
                 />

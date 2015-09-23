@@ -8,5 +8,6 @@
     <dimen name="express_info">15sp</dimen>
     <dimen name="express_id">15sp</dimen>
     <dimen name="info_text">20sp</dimen>
-    <dimen name="left_padding">18dp</dimen>
+    <dimen name="left_padding">16dp</dimen>
+    <dimen name="right_padding">10dp</dimen>
 </resources>
